@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        /* Lightbox estilos */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 1050;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox img, .lightbox video {
+            max-width: 80%;
+            max-height: 80%;
+        }
+
+        .lightbox .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        .lightbox .prev, .lightbox .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        .lightbox .prev {
+            left: 20px;
+        }
+
+        .lightbox .next {
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <section class="Navbar">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="index.html">RanasWEB</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="galeriaRanas.html">Galeria</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="sobreRanas.html">Sobre las ranas</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="sobreNosotros.html">Sobre nosotros</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+        </section>
+    </header>
+    <main>
+        <section>
+          <div>
+            <h1 class="texto1 text-center display-1 fade-in">RANITAS GALLERY</h1>
+            
+          </div>
+        </section>
+
+        <!-- Sección de videos -->
+        <section class="videos">
+            <div class="container">
+                <div class="row justify-content-center fade-in">
+                    <div class="col-md-4 mb-4">
+                        <div class="card" style="width: 20rem;">
+                            <video class="card-img-top lightbox-item" controls data-type="video">
+                                <source src="video/rana1.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="card-body">
+                              <h5 class="card-title text-center">Simplemente ranas</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card" style="width: 20rem;">
+                            <video class="card-img-top lightbox-item" controls data-type="video">
+                                <source src="video/rana2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="card-body">
+                              <h5 class="card-title text-center">Ribbit Ribbit</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card" style="width: 20rem;">
+                            <video class="card-img-top lightbox-item" controls data-type="video">
+                                <source src="video/rana3.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="card-body">
+                              <h5 class="card-title text-center">Informate sobre ellas</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de imágenes -->
+        <section>
+          <div class="container fade-in">
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <div class="card">
+                  <img src="images/ranasjuntas.jpg" class="card-img-top card-img-custom lightbox-item" alt="..." data-type="image">
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div class="card">
+                  <img src="images/ranafamosa.jpg" class="card-img-top card-img-custom lightbox-item" alt="..." data-type="image">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <div class="card">
+                  <img src="images/rana3.jpg" class="card-img-top card-img-custom lightbox-item" alt="..." data-type="image">
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div class="card">
+                  <img src="images/ranaempa.jpg" class="card-img-top card-img-custom lightbox-item" alt="..." data-type="image">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <div class="card">
+                  <img src="images/rana1.jpg" class="card-img-top card-img-custom lightbox-item" alt="..." data-type="image">
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div class="card">
+                  <img src="images/ranitadoc.jpeg" class="card-img-top card-img-custom lightbox-item" alt="..." data-type="image">
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="texto1 text-center display-1 fade-in">Tip: Si quieres ver a detalle las imagenes puedes darle click encima.</h3>
+        </section>
+    </main>
+
+    <!-- Lightbox para imágenes y videos -->
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <span class="prev">&#10094;</span>
+        <span class="next">&#10095;</span>
+        <div id="lightbox-content"></div>
+    </div>
+
+    <script>
+        // Variables del lightbox
+        const lightbox = document.getElementById('lightbox');
+        const lightboxContent = document.getElementById('lightbox-content');
+        const lightboxItems = document.querySelectorAll('.lightbox-item');
+        let currentIndex = 0;
+
+        // Abrir el lightbox al hacer clic en una miniatura
+        lightboxItems.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                currentIndex = index;
+                showLightbox(item);
+            });
+        });
+
+        // Función para mostrar el lightbox
+        function showLightbox(item) {
+            lightbox.style.display = 'flex';
+            const type = item.getAttribute('data-type');
+            if (type === 'image') {
+                lightboxContent.innerHTML = `<img src="${item.src}" alt="" />`;
+            } else if (type === 'video') {
+                const source = item.querySelector('source').src;
+                lightboxContent.innerHTML = `<video controls autoplay><source src="${source}" type="video/mp4"></video>`;
+            }
+        }
+
+        // Cerrar el lightbox
+        document.querySelector('.close').addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
+
+        // Navegar entre las imágenes/videos
+        document.querySelector('.prev').addEventListener('click', () => {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : lightboxItems.length - 1;
+            showLightbox(lightboxItems[currentIndex]);
+        });
+
+        document.querySelector('.next').addEventListener('click', () => {
+            currentIndex = (currentIndex < lightboxItems.length - 1) ? currentIndex + 1 : 0;
+            showLightbox(lightboxItems[currentIndex]);
+        });
+    </script> 
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+          const elements = document.querySelectorAll('.fade-in');
+  
+          const options = {
+              root: null, // el viewport
+              threshold: 0.1 // porcentaje visible para activar la animación
+          };
+  
+          const observer = new IntersectionObserver((entries, observer) => {
+              entries.forEach(entry => {
+                  if (entry.isIntersecting) {
+                      entry.target.classList.add('visible');
+                      observer.unobserve(entry.target); // Deja de observar el elemento después de que entra
+                  }
+              });
+          }, options);
+  
+          elements.forEach(element => {
+              observer.observe(element);
+          });
+      });
+  </script>
+
+
+    <!-- Agregar los scripts de Bootstrap y Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXlYQzL2Wn7j4h7P1kt6M4yMi8dLXT/6M7Db0DjIf92vzZO7tD0rRVOdr8Go" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhG81r6SCaB5p0IWYzjCFX7z24l5iK4mdl5vtWebFvHA9cA02D5pdBbyLqE7" crossorigin="anonymous"></script>
+</body>
+</html>
+

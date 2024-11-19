@@ -1,0 +1,85 @@
+.texto1 {
+    margin-top: 30px; /* ajusta el valor según sea necesario */
+    margin-bottom: 30px;
+  }
+
+.banner {
+    width: 100%;
+    overflow: hidden; /* Evita el desbordamiento si la imagen es más grande que el contenedor */
+  }
+  
+.banner img {
+    width: 100%;
+    display: block;
+  }
+
+
+.carousel {
+    height: 400px; /* Ajusta esta altura según tus necesidades */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que se desborde del contenedor */
+  }
+  
+.carousel-inner {
+    height: 100%;
+  }
+  
+.carousel-item img {
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen para que cubra el contenedor sin deformarse */
+  }
+
+.espaciador {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.espaciador2 {
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+.textoJustificado{
+  text-align: justify;
+}
+
+.custom-img-size {
+  width: 0%; /* Ajusta este valor según lo que necesites */
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+.navbar-logo {
+  height: 40px; /* Ajusta el tamaño del logo según lo necesites */
+  margin-left: 20px; /* Espacio entre el logo y los elementos del navbar */
+}
+
+/* Animación del desplazamiento del texto */
+@keyframes moverTexto {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Aplicando la animación al texto */
+.texto3 {
+  display: inline-block; /* Asegura que el texto se trate como un bloque inline para moverse */
+  animation: moverTexto 5s infinite linear; /* Duración y repetición de la animación */
+  white-space: nowrap; /* Evita que el texto se rompa en líneas múltiples */
+}
+
+/* Animación para los elementos */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
